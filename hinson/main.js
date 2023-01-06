@@ -1,6 +1,6 @@
 import "./style.css";
 const URL = "https://animechan.vercel.app/api/random";
-const Weather = "https://animechan.vercel.app/api/random/anime?title=naruto";
+const Anime = `https://animechan.vercel.app/api/random/character?name=${Name}`;
 async function getData(URL) {
   try {
     const response = await fetch(URL);
