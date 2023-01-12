@@ -1,12 +1,13 @@
 const DOMSelectors = {
   submit: document.getElementById("submit"),
+  Name: document.getElementById("input"),
 };
-const Anime = `https://animechan.vercel.app/api/random/character?name=Naruto`;
-async function getData(URL) {
+let URL = `https://api.nationalize.io/?name=${Name}`;
+async function getData() {
   try {
-    const response = await fetch(URL);
-    const data = await response.json();
-    console.log(data.character);
+    const temp = await fetch(URL);
+    const array = await temp.json();
+    console.log(array);
   } catch (error) {
     console.log(error);
   }
