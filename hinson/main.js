@@ -6,7 +6,7 @@ const DOMSelectors = {
 
 async function getData() {
   try {
-    let URL = `https://api.nationalize.io/?name=${name.value}`;
+    let URL = `https://api.nationalize.io/?name=${name}`;
     const temp = await fetch(URL);
     const array = await temp.json();
     console.log(array);
