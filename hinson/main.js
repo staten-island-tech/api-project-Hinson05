@@ -10,16 +10,16 @@ async function getData() {
     const bleh = await fetch(URL);
     const array = await bleh.json();
     console.log(array);
-    let flag = `https://countryflagsapi.com/png/${array.country[0].country_id}`;
-    const one = await fetch(flag);
+    let flag = `${array.country[0].country_id}`;
     console.log(one);
     let x = DOMSelectors.name.value;
     DOMSelectors.list.insertAdjacentHTML(
       "afterbegin",
       `<p class= "yes"> Name: ${x}  
       Nationality: ${array.country[0].country_id} Probability: ${array.country[0].probability}
-      <img src= 'https://countryflagsapi.com/png/${array.country[0].country_id}'></p>`
+      <img src= 'https://flagsapi.com/${flag}/flat/64.png'></p>`
     );
+    // https://www.countryflagicons.com/FLAT/64/${array.country[0].country_id}.png
   } catch (error) {
     console.log(error);
   }
