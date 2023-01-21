@@ -17,8 +17,9 @@ async function getData() {
       "afterbegin",
       `<p class= "yes"> Name: ${x}  
       Nationality: ${array.country[0].country_id} Probability: ${array.country[0].probability}
-      <img class= "box" src= 'https://flagsapi.com/${flag}/flat/64.png'></p>`
+      <img id= "image" src= 'https://flagsapi.com/${flag}/flat/64.png'></p>`
     );
+    DOMSelectors.name.value = "";
     // https://www.countryflagicons.com/FLAT/64/${array.country[0].country_id}.png
   } catch (error) {
     console.log(error);
@@ -26,6 +27,7 @@ async function getData() {
       "afterbegin",
       `<p class="yes">that's a dumb name, get a better one</p>`
     );
+    DOMSelectors.name.value = "";
   }
 }
 DOMSelectors.clear.addEventListener("click", function () {
