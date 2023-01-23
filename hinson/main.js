@@ -13,6 +13,7 @@ async function getData() {
     console.log(array);
     let flag = `${array.country[0].country_id}`;
     let x = DOMSelectors.name.value;
+
     DOMSelectors.list.insertAdjacentHTML(
       "afterbegin",
       `<p class= "yes"> Name: ${x}  
