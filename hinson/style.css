@@ -9,3 +9,6 @@ body {
   background-color: black;
   background-image: url(Img/flag\ png.png);
 }
+#input {
+  border-bottom: solid 2px black;
+}
